@@ -1,0 +1,301 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\CuitXClient.ico"
+IDI_ICON_TS             ICON                    "res\\app.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 142, 153
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "CuitXClient"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,45,134,50,14
+    CTEXT           "CuitXClient v1.2\nCopyright (C) 2011-2012",IDC_ABOUT_STATICA,18,97,105,16
+    CONTROL         "",IDC_ABOUT_HLINE,"Static",SS_BLACKFRAME,2,92,138,1
+    EDITTEXT        IDC_ABOUT_EDIT,2,2,138,89,ES_MULTILINE | ES_READONLY
+    ICON            IDR_MAINFRAME,IDC_ABOUT_ICONA,2,95,20,20,SS_CENTERIMAGE
+    ICON            IDI_ICON_TS,IDC_ABOUT_ICONB,119,95,20,20
+    CONTROL         "<a href=""mailto:tishion@163.com"">tishion@163.com</a>",IDC_SYSLINK_MAIL,
+                    "SysLink",WS_TABSTOP,40,120,62,10
+END
+
+IDD_MAINDLG DIALOGEX 0, 0, 291, 180
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "CuitXClient"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "开始认证",IDC_BUTTON_START,70,162,50,14
+    EDITTEXT        IDC_EDIT_ACCOUNT,25,10,109,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASSWD,25,28,109,14,ES_PASSWORD | ES_AUTOHSCROLL
+    CONTROL         "记住密码",IDC_CHECK_KEEPPASSWD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,141,12,48,10
+    CONTROL         "自动连接",IDC_CHECK_AUTOSTART,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,141,26,48,18
+    COMBOBOX        IDC_COMBO_NIC,25,46,163,58,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "选项(&O)>",IDC_BUTTON_OPTION,150,162,40,14
+    CONTROL         "广播发起",IDC_RADIO_CAST,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,206,17,69,10
+    CONTROL         "多播发起",IDC_RADIO_CAST1,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,206,29,69,10
+    CONTROL         "单播报文",IDC_RADIO_PKTCAST,"Button",BS_AUTORADIOBUTTON | WS_GROUP,206,57,69,10
+    CONTROL         "多播报文",IDC_RADIO_PKTCAST1,"Button",BS_AUTORADIOBUTTON,206,69,69,10
+    COMBOBOX        IDC_COMBO_CLIENTVER,202,97,80,43,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    CONTROL         "开机自动运行",IDC_CHECK_AUTORUN,"Button",BS_AUTOCHECKBOX | BS_LEFT | WS_TABSTOP,206,129,74,10
+    CONTROL         "允许气泡提示",IDC_CHECK_BUBBLENOTIFY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,206,144,74,10
+    PUSHBUTTON      "关于(&A)",ID_APP_ABOUT,215,162,50,14
+    LTEXT           "账号",IDC_STATIC_ACOUNT,7,13,16,8,NOT WS_GROUP
+    LTEXT           "密码",IDC_STATIC_PASSWD,7,31,16,8,NOT WS_GROUP
+    LTEXT           "网卡",IDC_STATIC_NIC,7,50,16,8,NOT WS_GROUP
+    GROUPBOX        "",IDC_STATIC_LEFT,2,0,192,180
+    LISTBOX         IDC_LIST_LOG,6,65,183,93,NOT LBS_NOTIFY | LBS_NOINTEGRALHEIGHT | LBS_NOSEL | WS_VSCROLL
+    GROUPBOX        "",IDC_STATIC_RIGHT,198,0,90,180
+    CONTROL         "",IDC_STATIC_OPTIONFRAME,"Static",SS_WHITEFRAME,195,0,95,180
+    GROUPBOX        "认证发起方式",IDC_STATIC_CAST,200,6,84,38
+    GROUPBOX        "高级设置",IDC_STATIC_ADVANCE,200,118,84,40
+    GROUPBOX        "自定义版本号",IDC_STATIC_CLIENTVER,200,86,84,30
+    GROUPBOX        "报文发送方式",IDC_STATIC,200,45,84,38
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 140
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 151
+    END
+
+    IDD_MAINDLG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 290
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,2
+ PRODUCTVERSION 1,0,0,2
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "华为H3C802.1X认证客户端-CUIT专用版"
+            VALUE "CompanyName", "Tishion"
+            VALUE "FileDescription", "802.1X认证客户端"
+            VALUE "FileVersion", "1, 0, 0, 3"
+            VALUE "InternalName", "CuitXClient"
+            VALUE "LegalCopyright", "Tishion Copyright (C) 2011 - 2012"
+            VALUE "OriginalFilename", "CuitXClient.exe"
+            VALUE "ProductName", "CuitXClient"
+            VALUE "ProductVersion", "1, 0, 0, 3"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_ICON_MENU MENU 
+BEGIN
+    POPUP "IDR_ICON_MENU"
+    BEGIN
+        MENUITEM "打开面板",                        ID_IDR_RESUME
+        MENUITEM "退出程序",                        ID_IDR_QUIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "CuitXClient"
+    IDS_CONFIGKEY           "Software\\CuitXClient"
+    IDS_KEY_AUTORUN         "AutoRun"
+    IDS_KEY_BUBBLENOTIFY    "BubbleNotify"
+    IDS_KEY_ACCOUNT         "Account"
+    IDS_KEY_PASSWD          "PassWd"
+    IDS_KEY_CASTSET         "CastSet"
+    IDS_KEY_AUTOSTART       "AutoStart"
+    IDS_KEY_KEEPPASSWD      "KeepPasswd"
+    IDS_KEY_PKTCASTSET      "PktCastSet"
+    IDS_KEY_CLIENTVER       "ClientVer"
+    IDS_KEY_NICNAME         "NicName"
+    IDS_VER_1               "CH V3.60-6210"
+    IDS_DEFAULT_VER         "EN V3.60-6210"
+    IDS_STRING142           "连接处于活动状态,请先断开连接."
+    IDS_STRING143           "获取网卡列表失败."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING144           "请输入账号和密码."
+    IDS_STRING145           "请选择用于连接的适配器."
+    IDS_STRING146           "请选择认证发起方式."
+    IDS_STRING148           "请选择报文发送方式."
+    IDS_STRING147           "请设置客户端版本号."
+    IDS_STRING149           "连接模块启动失败."
+    IDS_STRING150           "连接断开失败."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING1000          "连接终止!"
+    IDS_STRING1001          "适配器已关闭!"
+    IDS_STRING1002          "查找认证服务器..."
+    IDS_STRING1003          "查找认证服务器超时"
+    IDS_STRING1004          "验证客户端版本号..."
+    IDS_STRING1005          "发送下线请求..."
+    IDS_STRING1006          "验证用户名和密码..."
+    IDS_STRING1007          "认证失败."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING1008          "认证成功!"
+    IDS_STRING1009          "获取IP地址..."
+    IDS_STRING1010          "获取IP地址成功!"
+    IDS_STRING1011          "初始化适配器..."
+    IDS_STRING1012          "初始化适配器失败!"
+    IDS_STRING1013          "获取IP地址失败!"
+    IDS_STRING1014          "服务器已结束连接!"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING1100          "E2531:账号不存在!"
+    IDS_STRING1101          "E2535:服务暂停!"
+    IDS_STRING1102          "E2542:账号已在别处登录!"
+    IDS_STRING1103          "E2547:接入时段限制!"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING1104          "E2553:密码错误!"
+    IDS_STRING1105          "E2602:认证会话不存在!"
+    IDS_STRING1106          "E3137:客户端版本号无效!"
+    IDS_STRING1107          "E2592:设备IP绑定检查失败!"
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 英语(美国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // 英语(美国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
